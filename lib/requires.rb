@@ -1,5 +1,3 @@
-require 'byebug' if ENV['BYEBUG']
-
 def requires(*items)
   items = ['.'] if items.empty?
 

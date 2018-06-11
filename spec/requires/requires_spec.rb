@@ -19,6 +19,12 @@ describe 'requires' do
     end
   end
 
+  context "with an item that cannot be loadad" do
+    it "raises LoadError" do
+      expect{ requires 'not_a_file' }.to raise_error LoadError, "Cannot require not_a_file"
+    end
+  end
+
   context "with multiple items" do
     it "requires everything" do
       expect(runner 'multiple_items').to match_fixture "multiple_items"

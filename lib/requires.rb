@@ -13,7 +13,7 @@ def requires(*items)
       elsif File.file? "#{item}.rb" or File.file? item
         require "./#{item}"
       else
-        raise ArgumentError, "Cannot require #{item}"
+        raise LoadError, "Cannot require #{item}"
       end
     end
   end

@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.files       = Dir['README.md', 'lib/**/*.*']
   s.homepage    = 'https://github.com/dannyben/requires'
   s.license     = 'MIT'
-  s.required_ruby_version = ">= 2.0.0"
+  s.required_ruby_version = ">= 2.2.2"
 
   s.add_development_dependency 'byebug', '~> 10.0'
   s.add_development_dependency 'rspec', '~> 3.6'

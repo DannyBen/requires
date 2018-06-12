@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = 'requires'
   s.version     = '0.0.1'
   s.date        = Date.today.to_s
-  s.summary     = "Easily require files and directories"
-  s.description = "Easily require files and directories"
+  s.summary     = "Ruby's missing require function"
+  s.description = "A simple gem to require them all!"
   s.authors     = ["Danny Ben Shitrit"]
   s.email       = 'db@dannyben.com'
   s.files       = Dir['README.md', 'lib/**/*.*']

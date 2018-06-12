@@ -19,9 +19,15 @@ describe 'requires' do
     end
   end
 
+  context "with a library name" do
+    it "requires it" do
+      expect(runner 'library').to match_fixture "library"
+    end
+  end
+
   context "with an item that cannot be loadad" do
     it "raises LoadError" do
-      expect{ requires 'not_a_file' }.to raise_error LoadError, "Cannot require not_a_file"
+      expect{ requires 'not_a_file' }.to raise_error LoadError, /cannot load such file/
     end
   end
 

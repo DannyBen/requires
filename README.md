@@ -19,6 +19,8 @@ requires 'first/directory', 'second-dierectory'
 requires 'yaml', 'lib/important', 'lib'
 ```
 
+Everything is relative to where `requires` is called from.
+
 ---
 
 

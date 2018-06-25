@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'requires' do
   context "without arguments" do
-    it "requires all relative directory" do
+    it "requires current directory" do
       expect(runner 'without_arguments').to match_fixture "without_arguments"
     end
   end

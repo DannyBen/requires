@@ -4,7 +4,7 @@ require 'date'
 
 Gem::Specification.new do |s|
   s.name        = 'requires'
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.date        = Date.today.to_s
   s.summary     = "Ruby's missing require function"
   s.description = "A simple gem to require them all!"

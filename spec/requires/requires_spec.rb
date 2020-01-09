@@ -36,4 +36,16 @@ describe 'requires' do
       expect(runner 'multiple_items').to match_fixture "multiple_items"
     end
   end
+
+  context "with a glob pattern that does not end with .rb" do
+    it "requires all matching files" do
+      expect(runner 'glob_without_extension').to match_fixture "glob_without_extension"
+    end
+  end
+
+  context "with a glob pattern that does ends with .rb" do
+    it "requires all matching files" do
+      expect(runner 'glob_with_extension').to match_fixture "glob_with_extension"
+    end
+  end
 end

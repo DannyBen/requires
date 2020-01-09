@@ -13,7 +13,10 @@ It lets you...
 requires 'any_file', 'with/or/without/extension.rb'
 
 # ...require directories
-requires 'first/directory', 'second-dierectory'
+requires 'first/directory', 'second-directory'
+
+# ...require with a glob
+requires 'base_*', 'directory/*_base'
 
 # ...require any other library
 requires 'yaml', 'lib/important', 'lib'

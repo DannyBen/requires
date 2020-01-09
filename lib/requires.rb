@@ -6,7 +6,10 @@ def requires(*items)
 
   Dir.chdir base_dir do
     items.each do |item|
-      if File.directory? item
+      if item.include? '*'
+        item += ".rb" unless item.end_with? '.rb'
+        Dir["#{item}"].sort.each { |file| require "./#{file}" }
+      elsif File.directory? item
         Dir["#{item}/**/*.rb"].sort.each { |file| require "./#{file}" }
       elsif File.file? "#{item}.rb" or File.file? item
         require "./#{item}"

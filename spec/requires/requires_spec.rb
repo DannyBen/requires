@@ -48,4 +48,10 @@ describe 'requires' do
       expect(runner 'glob_with_extension').to match_approval "glob_with_extension"
     end
   end
+
+  context "with a path that matches both a directory and a filename" do
+    it "loads the file and not the directory" do
+      expect(runner 'matching_dir_and_file').to match_approval "matching_dir_and_file"
+    end
+  end
 end

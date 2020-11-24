@@ -9,10 +9,10 @@ def requires(*items)
       if item.include? '*'
         item += ".rb" unless item.end_with? '.rb'
         Dir["#{item}"].sort.each { |file| require "./#{file}" }
-      elsif File.directory? item
-        Dir["#{item}/**/*.rb"].sort.each { |file| require "./#{file}" }
       elsif File.file? "#{item}.rb" or File.file? item
         require "./#{item}"
+      elsif File.directory? item
+        Dir["#{item}/**/*.rb"].sort.each { |file| require "./#{file}" }
       else
         require item
       end

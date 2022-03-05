@@ -13,5 +13,5 @@ Gem::Specification.new do |s|
   s.files       = Dir['README.md', 'lib/**/*.*']
   s.homepage    = 'https://github.com/dannyben/requires'
   s.license     = 'MIT'
-  s.required_ruby_version = ">= 2.3.0"
+  s.required_ruby_version = ">= 2.6.0"
 end

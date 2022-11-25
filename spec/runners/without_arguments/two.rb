@@ -1,1 +1,1 @@
-puts "two"
+puts 'two'

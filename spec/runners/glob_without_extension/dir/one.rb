@@ -1,1 +1,1 @@
-puts "one"
+puts 'one'

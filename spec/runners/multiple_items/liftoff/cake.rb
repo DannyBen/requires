@@ -1,1 +1,1 @@
-puts "cake"
+puts 'cake'

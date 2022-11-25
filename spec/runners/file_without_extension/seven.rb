@@ -1,1 +1,1 @@
-puts "seven"
+puts 'seven'

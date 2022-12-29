@@ -1,2 +1,2 @@
 require 'requires'
-requires
+require_dir 'dir'

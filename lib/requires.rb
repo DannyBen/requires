@@ -1,21 +1,19 @@
-def requires(*items)
-  items = ['.'] if items.empty?
-
-  calling_script = caller(1..1).first.sub(/:\d+.*/, '')
-  base_dir = File.dirname calling_script
-
-  Dir.chdir base_dir do
-    items.each do |item|
-      if item.include? '*'
-        item += '.rb' unless item.end_with? '.rb'
-        Dir[item.to_s].sort.each { |file| require "./#{file}" }
-      elsif File.directory? item
-        Dir["#{item}/**/*.rb"].sort.each { |file| require "./#{file}" }
-      elsif File.file?("#{item}.rb") || File.file?(item)
-        require "./#{item}"
-      else
-        require item
-      end
-    end
+def require_dir(item)
+  Dir["#{item}/**/*.rb"].sort.each do |file|
+    require "./#{file}"
   end
 end
+
+def requires(item)
+  if File.directory? item
+    require_dir item
+  
+  elsif File.file?("#{item}.rb") || File.file?("#{item}")
+    require "./#{item}"
+  
+  else
+    require item
+
+  end
+end
+

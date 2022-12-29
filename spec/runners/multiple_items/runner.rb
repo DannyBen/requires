@@ -1,2 +1,5 @@
 require 'requires'
-requires 'dir', 'two', 'one', 'liftoff'
+requires 'dir'
+requires 'two'
+requires 'one'
+requires 'liftoff'

@@ -26,4 +26,4 @@ requires 'lib/base.rb'
 requires 'yaml'
 ```
 
-All paths are relative to the location of the file that calls `reuiqres`.
+All paths are relative to the location of the file that calls `requires`.

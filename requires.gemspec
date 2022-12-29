@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = 'requires'
-  s.version     = '1.0.0'
+  s.version     = '1.0.1'
   s.summary     = 'Require all files in a directory'
   s.description = 'Adds functions that allow requiring a direcotry'
   s.authors     = ['Danny Ben Shitrit']

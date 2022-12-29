@@ -24,7 +24,6 @@ requires 'lib/base.rb'
 
 # ...as well as external gems or built in libraries
 requires 'yaml'
-
-# Explicitely require a directory
-require_dir 'lib'
 ```
+
+All paths are relative to the location of the file that calls `reuiqres`.

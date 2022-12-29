@@ -1,15 +1,15 @@
-def require_dir(item)
-  Dir["#{item}/**/*.rb"].sort.each do |file|
-    require "./#{file}"
-  end
-end
-
 def requires(item)
-  if File.directory? item
-    require_dir item
+  base_path = caller_locations[0].path
+  base_dir = File.dirname base_path
+  path = File.expand_path item, base_dir
 
-  elsif File.file?("#{item}.rb") || File.file?("#{item}")
-    require "./#{item}"
+  if File.directory? path
+    Dir["#{path}/**/*.rb"].sort.each do |file|
+      require file
+    end
+
+  elsif File.file?("#{path}.rb") || File.file?("#{path}")
+    require path
 
   else
     require item

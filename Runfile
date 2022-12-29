@@ -7,9 +7,3 @@ summary "Runfile tasks for building the Requires gem"
 
 RunfileTasks::RubyGems.all 'requires'
 RunfileTasks::Testing.rspec
-
-help   "Generate changelog"
-action :changelog do
-  system 'github_changelog_generator --cache-file tmp/changlog-cache'  
-  system "git commit -am 'update changelog' && git push"
-end

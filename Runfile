@@ -1,9 +1,8 @@
-require "runfile-tasks"
 require "byebug"
-require_relative 'lib/requires'
+require 'requires'
 
 title   "Requires Developer Toolbelt"
 summary "Runfile tasks for building the Requires gem"
 
-RunfileTasks::RubyGems.all 'requires'
-RunfileTasks::Testing.rspec
+import_gem 'runfile-tasks/gem'
+

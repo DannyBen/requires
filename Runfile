@@ -1,8 +1,8 @@
-require "byebug"
+require 'debug'
 require 'requires'
 
-title   "Requires Developer Toolbelt"
-summary "Runfile tasks for building the Requires gem"
+title   'Requires Developer Toolbelt'
+summary 'Runfile tasks for building the Requires gem'
 
 import_gem 'runfile-tasks/gem'
 

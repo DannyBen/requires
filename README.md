@@ -46,3 +46,12 @@ autoload :Asset, './lib/asset'
 autoload :SomeAPI, './lib/some_api'
 autoload :HTTPClient, './lib/HTTPClient'
 ```
+
+In case you wish to autoload from the same directory, you can omit the first
+argument:
+
+```ruby
+autoloads %i[Asset SomeAPI HTTPClient]
+# which is the same as
+# autoloads '.', %i[Asset SomeAPI HTTPClient]
+```

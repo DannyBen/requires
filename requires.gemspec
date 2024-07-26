@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = 'requires'
-  s.version     = '1.0.1'
+  s.version     = '1.1.0'
   s.summary     = 'Require all files in a directory'
   s.description = 'Adds functions that allow requiring a direcotry'
   s.authors     = ['Danny Ben Shitrit']
@@ -12,6 +12,12 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/dannyben/requires'
   s.license     = 'MIT'
 
-  s.required_ruby_version = '>= 2.6.0'
-  s.metadata['rubygems_mfa_required'] = 'true'
+  s.required_ruby_version = '>= 3.0'
+  s.metadata = {
+    'bug_tracker_uri'       => 'https://github.com/DannyBen/requires/issues',
+    'changelog_uri'         => 'https://github.com/DannyBen/requires/blob/master/CHANGELOG.md',
+    'homepage_uri'          => 'https://requires.dannyb.co/',
+    'source_code_uri'       => 'https://github.com/DannyBen/requires',
+    'rubygems_mfa_required' => 'true',
+  }
 end

@@ -1,8 +1,5 @@
 # Requires
 
-[![Gem Version](https://badge.fury.io/rb/requires.svg)](https://badge.fury.io/rb/requires)
-[![Build Status](https://github.com/DannyBen/requires/workflows/Test/badge.svg)](https://github.com/DannyBen/requires/actions?query=workflow%3ATest)
-
 A tiny convenience function to require or autoload all ruby files in a directory.
 
 ## Install

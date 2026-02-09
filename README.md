@@ -1,5 +1,7 @@
 # Requires
 
+![repocard](https://repocard.dannyben.com/svg/requires.svg)
+
 A tiny convenience function to require or autoload all ruby files in a directory.
 
 ## Install
